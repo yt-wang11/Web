@@ -195,6 +195,32 @@ function show() {
 
 }
 
+function remind() {
+    var $chenked = $("#order_table tbody input:checkbox:checked");
+    if ($chenked.length === 0){
+        layer.alert("请选择需要查看的员工", {icons : 5});
+    }else {
+        var xhs = '';
+        $.each($("#order_table tbody input:checkbox:checked"), function (value) {
+            xhs += data[$(this).parent().parent().index()].id;
+            xhs += ",";
+        });
+        var param = new Object();
+        param["ids"] = xhs;
+        var path = $("#contextPath").val() + "/remind?ids=" + xhs;
+        var title = "查看员工合同到期时间";
+        layer.open({
+            type: 2,
+            title:title,
+            fix: false,
+            shadeClose:false,
+            maxmin:false,
+            area: ['800px','500px'],
+            content:path
+        });
+    }
+}
+
 function exportFile() {
     if ($("#order_table tbody input:checkbox:checked").length === 0){
         layer.alert("请选择需要导出的内容", {icons : 5});

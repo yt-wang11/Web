@@ -167,6 +167,17 @@ public class LoginController {
         ModelAndView mv = new ModelAndView("orderadd");
         mv.addObject("ajax_url", ajax_url);
         mv.addObject("cjbh", session.getAttribute("username"));
+//        view.setViewName("index");
+//        view.addObject("name","zs");
+        return mv;
+    }
+
+    @RequestMapping("/remind")
+    public ModelAndView remind(String ids, HttpSession session) {
+        ModelAndView mv = new ModelAndView("remind");
+        mv.addObject("ajax_url", ajax_url);
+        mv.addObject("cjbh", session.getAttribute("username"));
+        mv.addObject("ids", ids);
         return mv;
     }
 

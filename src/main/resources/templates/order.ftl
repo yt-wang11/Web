@@ -30,6 +30,9 @@
         <button id="btn_show" type="button" class="btn btn-default" onclick="show()">
             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>查看详情
         </button>
+        <button id="btn_remind" type="button" class="btn btn-default" onclick="remind()">
+            <span class="glyphicon glyphicon-send" aria-hidden="true"></span>到期提醒
+        </button>
     </div>
     <table id="order_table" class="text-center"></table>
 </div>
