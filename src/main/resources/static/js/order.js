@@ -26,6 +26,9 @@ var TableInit = function () {
             field : 'age',
             title : '年龄'
         },{
+            field : 'idcard',
+            title : '身份证号'
+        },{
             field : 'entrytime',
             title : '入职时间'
         }];
