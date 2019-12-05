@@ -44,18 +44,6 @@
                         <i class="icon-lock icon_font"></i>
                         <input type="password" class="login_input" name="password" id="password" placeholder="请输入密码" />
                     </div>
-                    <div id="div_radio" class="radio mg-b25">
-                        <label>
-                            请选择您的身份:&nbsp;&nbsp;&nbsp;&nbsp;
-                        </label>
-                        <label>
-                            <input type="radio" value="1" onchange="radioChange()" name="user" checked />厂家
-                        </label>
-                        &nbsp;&nbsp;&nbsp;
-                        <label>
-                            <input type="radio" value="0" onchange="radioChange()" name="user" />用户
-                        </label>
-                    </div>
                     <button style="submit" class="login_btn">登 录</button>
                </form>
         </div><!--row end-->
