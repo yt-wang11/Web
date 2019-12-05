@@ -23,8 +23,8 @@
         <button id="btn_delete" type="button" class="btn btn-default" onclick="deleteByXh()">
             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
         </button>
-        <button id="btn_print" type="button" class="btn btn-default" onclick="printOrder()">
-            <span class="glyphicon glyphicon-print" aria-hidden="true"></span>打印
+        <button id="btn_print" type="button" class="btn btn-default" onclick="exportFile()">
+            <span class="glyphicon glyphicon-export" aria-hidden="true"></span>导出
         </button>
 
         <button id="btn_show" type="button" class="btn btn-default" onclick="show()">

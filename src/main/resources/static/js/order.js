@@ -199,40 +199,17 @@ function show() {
 
 }
 
-function printOrder() {
+function exportFile() {
     if ($("#order_table tbody input:checkbox:checked").length === 0){
-        layer.alert("请选择需要打印的内容", {icons : 5});
-    }else if($("#order_table tbody input:checkbox:checked").length > 1){
-        layer.alert("只能选择一个订单进行打印", {icons : 5});
+        layer.alert("请选择需要导出的内容", {icons : 5});
     }else {
-        var code = $("#order_table tbody input:checkbox:checked").parent().parent().find("td").eq(1).text();
-        var path = $("#contextPath").val() + "/print?code=" + code ;
-        var title = "打印订单";
-        layer.open({
-            type: 2,
-            title:title,
-            fix: false,
-            shadeClose:false,
-            maxmin:false,
-            area: ['600px','400px'],
-            content:path
+        var xhs = '';
+        $.each($("#order_table tbody input:checkbox:checked"), function (value) {
+            xhs += data[$(this).parent().parent().index()].id;
+            xhs += ",";
         });
+        location.href = $("#ajax_url").val() + "/staff/export?ids=" + xhs;
     }
 
-}
-
-function print_ord(code) {
-    layer.closeAll();
-    var path =  "/print?code=" + code ;
-    var title = "打印订单";
-    layer.open({
-        type: 2,
-        title:title,
-        fix: false,
-        shadeClose:false,
-        maxmin:false,
-        area: ['600px','400px'],
-        content:path
-    });
 }
 
