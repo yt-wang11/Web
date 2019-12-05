@@ -100,9 +100,6 @@
 								<dd>
 									<a href="#" onclick="modifyPwd()"><i class="fa fa-gear" aria-hidden="true"></i> 修改密码</a>
 								</dd>
-                                <#--<dd>
-                                    <a onclick="requestFullScreen();" href="javascript:;"><i class="fa fa-gear" aria-hidden="true"></i> 全屏</a>
-                                </dd>-->
 								<dd id="lock">
 									<a href="javascript:;">
 										<i class="fa fa-lock" aria-hidden="true" style="padding-right: 3px;padding-left: 1px;"></i> 锁屏
@@ -129,7 +126,7 @@
 					<ul class="layui-tab-title">
 						<li class="layui-this">
 							<i class="fa fa-dashboard" aria-hidden="true"></i>
-							<cite>系统主页</cite>
+							<cite>主页</cite>
 						</li>
 					</ul>
 					<div class="layui-tab-content" style="min-height: 150px; padding: 5px 0 0 0;">

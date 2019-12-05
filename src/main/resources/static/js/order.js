@@ -2,8 +2,6 @@
 var $table = $("#order_table");
 var data = [];
 $(document).ready(function () {
-    //alert($("#ajax_url").val());
-    //test();
     var oTable = new TableInit();
     oTable.init();
 });
@@ -40,7 +38,7 @@ var TableInit = function () {
             queryParams: oTableInit.queryParams,//传递参数（*）
             clickToSelect: true,//设置checkbox
             cache: false,
-            sortable: false,                     //是否启用排序
+            sortable: true,                     //是否启用排序
             sortOrder: "asc",
             undefinedText: '-',
             pagination: true,

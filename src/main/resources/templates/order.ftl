@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-<div class="panel-body" style="padding-bottom:0px;">
+<div class="panel-body wrapper wrapper-content" style="padding-bottom:0px;">
     <div id="toolbar">
         <button id="btn_add" type="button" class="btn btn-default" onclick="addOrder()">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
