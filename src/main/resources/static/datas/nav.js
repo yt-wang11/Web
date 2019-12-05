@@ -1,5 +1,5 @@
 var navs = [{
-	"title": "功能菜单",
+	"title": "菜单",
 	"icon": "fa-cubes",
 	"spread": true,
 	"children": [{
@@ -8,6 +8,3 @@ var navs = [{
 		"href": "http://localhost:8087/orderlist"
 	}]
 }];
-//120.27.211.172:80
-//http://localhost:8087
-//http://www.bebter.com
