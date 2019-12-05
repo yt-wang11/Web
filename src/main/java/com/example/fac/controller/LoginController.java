@@ -193,7 +193,7 @@ public class LoginController {
                                     String Idcard, String Education, String Title,
                                     String Entrytime, String Contractlife, String Workchangerecord,
                                     String Rewardsandpunishmentrecords, String Rankevaluationrecord,
-                                    HttpSession session) {
+                                    Integer type, HttpSession session) {
         ModelAndView mv = new ModelAndView("orderModify");
         mv.addObject("ajax_url", ajax_url);
         mv.addObject("cjbh", session.getAttribute("username"));
@@ -210,6 +210,7 @@ public class LoginController {
         mv.addObject("Workchangerecord", Workchangerecord);
         mv.addObject("Rewardsandpunishmentrecords", Rewardsandpunishmentrecords);
         mv.addObject("Rankevaluationrecord", Rankevaluationrecord);
+        mv.addObject("showType", type);
         return mv;
     }
 

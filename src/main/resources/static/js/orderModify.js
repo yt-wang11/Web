@@ -2,6 +2,7 @@
       formInit();
       Datetime();
       modifySelect();
+      show();
 });
 
 function formInit() {
@@ -122,4 +123,13 @@ function modifySelect() {
       document.getElementById("nowdate").value = mydate;
   }
 
+  function show() {
+      var type = $("#showType").val();
+      if (type == 1) {
+          $("#contact_form input").attr("disabled", true);
+          $("#contact_form select").attr("disabled", true);
+          $("#contact_form textarea").attr("disabled", true);
+          $("#submitBtn").hide();
+      }
+  }
 

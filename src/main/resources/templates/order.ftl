@@ -26,6 +26,10 @@
         <button id="btn_print" type="button" class="btn btn-default" onclick="printOrder()">
             <span class="glyphicon glyphicon-print" aria-hidden="true"></span>打印
         </button>
+
+        <button id="btn_show" type="button" class="btn btn-default" onclick="show()">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>查看详情
+        </button>
     </div>
     <table id="order_table" class="text-center"></table>
 </div>

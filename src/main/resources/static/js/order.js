@@ -104,7 +104,7 @@ function deleteByXh() {
 
 function addOrder() {
     var path = $("#contextPath").val() + "/orderadd";
-    var title = "新增订单";
+    var title = "新增员工信息";
     layer.open({
         type: 2,
         title:title,
@@ -137,8 +137,48 @@ function orderModify() {
                     "&Age="+ res.Age +"&Sex="+ res.Sex + "&Workdepartment=" + res.Workdepartment +
                     "&Idcard="+ res.Idcard +"&Education="+ res.Education + "&Title=" + res.Title +
                     "&Entrytime="+ res.Entrytime +"&Contractlife="+ res.Contractlife + "&Workchangerecord=" + res.Workchangerecord +
-                    "&Rewardsandpunishmentrecords="+ res.Rewardsandpunishmentrecords +"&Rankevaluationrecord="+ res.Rankevaluationrecord;
-                var title = "修改订单";
+                    "&Rewardsandpunishmentrecords="+ res.Rewardsandpunishmentrecords +"&Rankevaluationrecord="+ res.Rankevaluationrecord
+                + "&type=" + 0;
+                var title = "修改员工信息";
+                layer.open({
+                    type: 2,
+                    title:title,
+                    fix: false,
+                    shadeClose:false,
+                    maxmin:false,
+                    area: ['800px','600px'],
+                    content:path
+                });
+            }
+        });
+    }
+
+}
+
+function show() {
+    var $chenked = $("#order_table tbody input:checkbox:checked");
+    if ($chenked.length === 0){
+        layer.alert("请选择需要查看的员工", {icons : 5});
+    }else if($chenked.length > 1) {
+        layer.alert("只能选择一条进行查看", {icons : 5});
+    }else {
+        var xh = data[$chenked.parent().parent().index()].id;
+        var param = new Object();
+        param["id"] = xh;
+        $.ajax({
+            url: $("#ajax_url").val() + "/staff/show",
+            type: "post",
+            cache: false,
+            async: false,
+            data : param,
+            success: function (res) {
+                var path = $("#contextPath").val() + "/orderModify?Id=" + res.Id + "&Name=" + res.Name +
+                    "&Age="+ res.Age +"&Sex="+ res.Sex + "&Workdepartment=" + res.Workdepartment +
+                    "&Idcard="+ res.Idcard +"&Education="+ res.Education + "&Title=" + res.Title +
+                    "&Entrytime="+ res.Entrytime +"&Contractlife="+ res.Contractlife + "&Workchangerecord=" + res.Workchangerecord +
+                    "&Rewardsandpunishmentrecords="+ res.Rewardsandpunishmentrecords +"&Rankevaluationrecord="+ res.Rankevaluationrecord
+                    + "&type=" + 1;
+                var title = "查看员工信息";
                 layer.open({
                     type: 2,
                     title:title,

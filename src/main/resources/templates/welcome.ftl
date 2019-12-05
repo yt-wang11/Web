@@ -57,7 +57,7 @@
 
 
 <nav class="codrops-demos">
-    <a href="#"><h1>欢迎使用OMS系统</h1></a>
+    <a href="#"><h1>欢迎使用HR管理系统</h1></a>
 </nav>
 
 

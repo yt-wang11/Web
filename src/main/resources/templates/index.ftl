@@ -141,8 +141,8 @@
 			</div>
 			<div class="layui-footer footer footer-demo" id="admin-footer">
 				<div class="layui-main">
-					<p>2018 &copy;
-						 BeBetter license 皖ICP<a href="http://www.miitbeian.gov.cn">18009114</a>号
+					<p>2019 &copy;
+						 license 皖ICP<a href="http://www.miitbeian.gov.cn">xxxxxx</a>号
 					</p>
 				</div>
 			</div>

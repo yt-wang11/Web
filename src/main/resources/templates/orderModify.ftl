@@ -194,6 +194,7 @@
 <input type="hidden" id="SexTmp" value="${Sex}" />
 <input type="hidden" id="EducationTmp" value="${Education}" />
 <input type="hidden" id="EntrytimeTmp" value="${Entrytime}" />
+<input type="hidden" id="showType" value="${showType}" />
 </body>
 
 </html>
