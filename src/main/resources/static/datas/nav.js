@@ -3,11 +3,11 @@ var navs = [{
 	"icon": "fa-cubes",
 	"spread": true,
 	"children": [{
-		"title": "订单列表",
+		"title": "员工列表",
 		"icon": "&#xe60a;",
 		"href": "http://localhost:8087/orderlist"
 	}/* , {
-		"title": "新增订单",
+		"title": "新增员工",
 		"icon": "&#xe63c;",
 		"href": "http://localhost:8087/orderadd_new"
 	},{

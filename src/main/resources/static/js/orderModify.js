@@ -22,7 +22,7 @@ function formInit() {
                       },
                       /*remote: {
                           url: $("#ajax_url").val() + "/order/exist",//验证地址
-                          message: '订单号已存在',//提示消息
+                          message: '员工号已存在',//提示消息
                           delay: 500,
                           type: 'POST',//请求方式
                           data: function() {
@@ -38,6 +38,13 @@ function formInit() {
                   validators: {
                       notEmpty: {
                           message: '请输入员工姓名'
+                      }
+                  }
+              },
+              Age: {
+                  validators: {
+                      notEmpty: {
+                          message: '请输入员工年龄'
                       }
                   }
               }

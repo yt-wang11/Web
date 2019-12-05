@@ -21,7 +21,7 @@ function formInit() {
                     },
                     /*remote: {
                         url: $("#ajax_url").val() + "/order/exist",//验证地址
-                        message: '订单号已存在',//提示消息
+                        message: '员工号已存在',//提示消息
                         delay: 500,
                         type: 'POST',//请求方式
                         data: function() {
@@ -39,10 +39,18 @@ function formInit() {
                         message: '请输入员工姓名'
                     }
                 }
+            },
+            Age: {
+                validators: {
+                    notEmpty: {
+                        message: '请输入员工年龄'
+                    }
+                }
             }
         }
     });
     $("#submitBtn").click(function () {//非submit按钮点击后进行验证，如果是submit则无需此句直接验证
+        $("#contact_form").bootstrapValidator('validate');
         if($("#contact_form").data("bootstrapValidator").isValid()){
             var $form = $("#contact_form");
             $.ajax({

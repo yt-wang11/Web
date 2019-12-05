@@ -17,16 +17,16 @@ function formInit() {
                 threshold :  6,
                 validators: {
                     notEmpty: {
-                        message: '请输入订单号'
+                        message: '请输入员工号'
                     },
                     stringLength: {
                         min: 6,
                         max: 30,
-                        message: '订单号长度必须在6到30之间'
+                        message: '员工号长度必须在6到30之间'
                     },
                     remote: {
                         url: $("#ajax_url").val() + "/order/exist",//验证地址
-                        message: '订单号已存在',//提示消息
+                        message: '员工号已存在',//提示消息
                         delay: 500,
                         type: 'POST',//请求方式
                         data: function() {
@@ -210,7 +210,7 @@ function initSelect() {
   function print(code) {
       layer.closeAll();
       var path =  "/print?code=" + code ;
-      var title = "打印订单";
+      var title = "打印员工";
       layer.open({
           type: 2,
           title:title,

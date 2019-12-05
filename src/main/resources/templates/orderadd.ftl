@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>订单新增</title>
+    <title>员工新增</title>
     <link rel='stylesheet prefetch' href='${contextPath}/plugins/bootstrap-validator/css/bootstrap.min.css'>
     <link rel='stylesheet prefetch' href='${contextPath}/plugins/bootstrap-validator/css/bootstrap-theme.min.css'>
     <link rel='stylesheet prefetch' href='${contextPath}/plugins/bootstrap-validator/css/bootstrapValidator.min.css'>
@@ -22,7 +22,7 @@
     <form class="well form-horizontal" action=" " method="post"  id="contact_form">
         <fieldset>
             <!-- Form Name -->
-            <#--<legend>新增订单</legend>-->
+            <#--<legend>新增员工</legend>-->
             <div class="form-group">
                 <label class="col-md-4 control-label">员工号</label>
                 <div class="col-md-4 inputGroupContainer">

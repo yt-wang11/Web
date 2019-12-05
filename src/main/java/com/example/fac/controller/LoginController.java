@@ -19,11 +19,6 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.Timestamp;
 
-/**
- * @author 姜涛
- * @create 2018-04-13 9:23
- * @desc 测试
- **/
 @Controller
 public class LoginController {
 
@@ -159,12 +154,6 @@ public class LoginController {
         return mv;
     }
 
-    @RequestMapping("/searchDetail")
-    public ModelAndView searchDetail() {
-        ModelAndView mv = new ModelAndView("searchDetail");
-        return mv;
-    }
-
     @RequestMapping("/orderlist")
     public ModelAndView orderList(HttpSession session) {
         ModelAndView mv = new ModelAndView("order");
@@ -180,16 +169,9 @@ public class LoginController {
         mv.addObject("cjbh", session.getAttribute("username"));
         return mv;
     }
-    @RequestMapping("/orderadd_new")
-    public ModelAndView orderadd_new(HttpSession session) {
-        ModelAndView mv = new ModelAndView("orderadd_new");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
 
     @RequestMapping("/orderModify")
-    public ModelAndView orderModify(Integer Id, String Name, String Sex, Integer Age, String Workdepartment,
+    public ModelAndView orderModify(Integer Id, String Name, String Sex, String Age, String Workdepartment,
                                     String Idcard, String Education, String Title,
                                     String Entrytime, String Contractlife, String Workchangerecord,
                                     String Rewardsandpunishmentrecords, String Rankevaluationrecord,
@@ -214,130 +196,12 @@ public class LoginController {
         return mv;
     }
 
-    @RequestMapping("/print")
-    public ModelAndView print(String code, HttpSession session) {
-        ModelAndView mv = new ModelAndView("print");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        mv.addObject("code", code);
-        return mv;
-    }
 
     @RequestMapping("/welcome")
     public ModelAndView welcome(String code, HttpSession session) {
         ModelAndView mv = new ModelAndView("welcome");
         mv.addObject("ajax_url", ajax_url);
         mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-    @RequestMapping("/workerlist")
-    public ModelAndView workerlist(HttpSession session) {
-        ModelAndView mv = new ModelAndView("worker");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-    @RequestMapping("/workeradd")
-    public ModelAndView workeradd(HttpSession session) {
-        ModelAndView mv = new ModelAndView("workeradd");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-
-    @RequestMapping("/workerDetail")
-    public ModelAndView worker_detail(HttpSession session, String grxm) {
-        ModelAndView mv = new ModelAndView("worker_detail");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("grxm", grxm);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-    @RequestMapping("/worker_advance")
-    public ModelAndView worker_advance(HttpSession session, String grxm, String lxfs) {
-        ModelAndView mv = new ModelAndView("worker_advance");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("grxm", grxm);
-        mv.addObject("lxfs", lxfs);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-    @RequestMapping("/clientDetail")
-    public ModelAndView client_detail(HttpSession session, String khbh) {
-        ModelAndView mv = new ModelAndView("client_detail");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("khbh", khbh);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-    @RequestMapping("/clientlist")
-    public ModelAndView clientlist(HttpSession session) {
-        ModelAndView mv = new ModelAndView("client");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-    @RequestMapping("/clientadd")
-    public ModelAndView clientadd(HttpSession session) {
-        ModelAndView mv = new ModelAndView("clientadd");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-    @RequestMapping("/clientModify")
-    public ModelAndView clientModify(String khmc, String khdz, String lxfs, String hzsj, Long xh, HttpSession session) {
-        ModelAndView mv = new ModelAndView("clientModify");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        mv.addObject("khmc", khmc);
-        mv.addObject("khdz", khdz);
-        mv.addObject("lxfs", lxfs);
-        mv.addObject("hzsj", hzsj);
-        mv.addObject("xh", xh);
-        return mv;
-    }
-
-    @RequestMapping("/service")
-    public ModelAndView service(HttpSession session) {
-        ModelAndView mv = new ModelAndView("service");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-    @RequestMapping("/flowlist")
-    public ModelAndView flowlist(HttpSession session) {
-        ModelAndView mv = new ModelAndView("flow");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-    @RequestMapping("/flowadd")
-    public ModelAndView flowadd(HttpSession session) {
-        ModelAndView mv = new ModelAndView("flowadd");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        return mv;
-    }
-
-    @RequestMapping("/flowModify")
-    public ModelAndView flowModify(String bzjb, String bzmc, String bzts, Long xh, HttpSession session) {
-        ModelAndView mv = new ModelAndView("flowModify");
-        mv.addObject("ajax_url", ajax_url);
-        mv.addObject("cjbh", session.getAttribute("username"));
-        mv.addObject("bzjb", bzjb);
-        mv.addObject("bzmc", bzmc);
-        mv.addObject("bzts", bzts);
-        mv.addObject("xh", xh);
         return mv;
     }
 
