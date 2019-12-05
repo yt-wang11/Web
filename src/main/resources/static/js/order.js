@@ -116,7 +116,7 @@ function addOrder() {
         fix: false,
         shadeClose:false,
         maxmin:false,
-        area: ['800px','600px'],
+        area: ['800px','500px'],
         content:path
     });
 }
@@ -151,7 +151,7 @@ function orderModify() {
                     fix: false,
                     shadeClose:false,
                     maxmin:false,
-                    area: ['800px','600px'],
+                    area: ['800px','500px'],
                     content:path
                 });
             }
@@ -190,7 +190,7 @@ function show() {
                     fix: false,
                     shadeClose:false,
                     maxmin:false,
-                    area: ['800px','600px'],
+                    area: ['800px','500px'],
                     content:path
                 });
             }
