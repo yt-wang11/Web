@@ -55,8 +55,6 @@ var TableInit = function () {
             showRefresh : true,
             toolbar: '#toolbar',
             toolbarAlign: 'left',
-            showExport: true,                     //是否显示导出按钮
-            exportTypes:['csv', 'txt', 'sql', 'doc', 'excel', 'xlsx', 'pdf'],           //导出文件类型
             responseHandler: function (res) {
                 data = res.rows;
                 return res;
